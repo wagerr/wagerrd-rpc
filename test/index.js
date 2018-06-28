@@ -527,4 +527,5 @@ describe('RpcClient', function () {
     })
 
   })
+})
 
