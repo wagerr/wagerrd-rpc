@@ -2,7 +2,7 @@ wagerrd-rpc.js
 ==============
 
 [![NPM Package](https://img.shields.io/npm/v/wagerrd-rpc.svg?style=flat-square)](https://www.npmjs.org/package/wagerrd-rpc)
-[![Build Status](https://img.shields.io/travis/com/wagerr/wagerrd-rpc.svg?branch=master&style=flat-square)](https://travis-ci.org/wagerr/wagerrd-rpc)
+[![Build Status](https://img.shields.io/travis/com/wagerr/wagerrd-rpc.svg?branch=master&style=flat-square)](https://travis-ci.com/wagerr/wagerrd-rpc)
 [![Coverage Status](https://img.shields.io/coveralls/wagerr/wagerrd-rpc.svg?style=flat-square)](https://coveralls.io/r/wagerr/wagerrd-rpc?branch=master)
 
 A client library to connect to Wagerr Core RPC in JavaScript.
