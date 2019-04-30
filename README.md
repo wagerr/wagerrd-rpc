@@ -1,9 +1,9 @@
 wagerrd-rpc.js
-===============
+==============
 
 [![NPM Package](https://img.shields.io/npm/v/wagerrd-rpc.svg?style=flat-square)](https://www.npmjs.org/package/wagerrd-rpc)
-[![Build Status](https://img.shields.io/travis/LooorTor/wagerrd-rpc.svg?branch=master&style=flat-square)](https://travis-ci.org/LooorTor/wagerrd-rpc)
-[![Coverage Status](https://img.shields.io/coveralls/LooorTor/wagerrd-rpc.svg?style=flat-square)](https://coveralls.io/r/LooorTor/wagerrd-rpc?branch=master)
+[![Build Status](https://img.shields.io/travis/wagerr/wagerrd-rpc.svg?branch=master&style=flat-square)](https://travis-ci.org/wagerr/wagerrd-rpc)
+[![Coverage Status](https://img.shields.io/coveralls/wagerr/wagerrd-rpc.svg?style=flat-square)](https://coveralls.io/r/wagerr/wagerrd-rpc?branch=master)
 
 A client library to connect to Wagerr Core RPC in JavaScript.
 
@@ -70,4 +70,6 @@ var run = function() {
 
 ## License
 
-**Code released under [the MIT license](https://github.com/wagerrd/LooorTor/blob/master/LICENSE).**
+**Code released under [the MIT license](https://github.com/wagerr/wagerrd-rpc/blob/master/LICENSE).**
+
+Copyright 2018-2019 Wagerr Limited
