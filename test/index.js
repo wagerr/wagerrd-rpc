@@ -9,10 +9,19 @@ var should = chai.should()
 var http = require('http')
 var https = require('https')
 var async = require('async')
+var moxios = require('moxios')
 
 if (!setImmediate) setImmediate = setTimeout
 
 describe('RpcClient', function () {
+  beforeEach(function() {
+    moxios.install()
+  });
+
+  afterEach(function() {
+    moxios.uninstall()
+  });
+
 
   it('should initialize the main object', function () {
     should.exist(RpcClient)
@@ -126,6 +135,41 @@ describe('RpcClient', function () {
   //   })
 
   // })
+
+  it('should call correct placeParlayBet and receive response', function (done) {
+    var onFulfilled = sinon.spy();
+    var client = new RpcClient({
+      user: 'user',
+      pass: 'pass',
+      host: 'localhost',
+      port: 8332,
+    });
+
+    client.placeParlayBet([{ eventId: 1, outcome: 1 }, { eventId: 2, outcome: 1 }], 100)
+        .then(onFulfilled);
+
+    moxios.wait(function() {
+      moxios.requests.count().should.equal(1);
+
+      var request = moxios.requests.mostRecent();
+
+      request.config.data.should.have.string(
+          '"method":"placeparlaybet","params":[[{"eventId":1,"outcome":1},{"eventId":2,"outcome":1}],100],'
+      );
+      request.respondWith({
+        status: 200,
+        response: 'transactionId',
+      })
+          .then(function() {
+            onFulfilled.called.should.isTrue;
+
+            var response = onFulfilled.getCall(0).args[0];
+            response.should.equal('transactionId');
+          });
+
+      done();
+    });
+  });
 
   // it('accept many values for bool', function (done) {
 
