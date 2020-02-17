@@ -1,7 +1,7 @@
 {
   "name": "wagerrd-rpc",
   "description": "Wagerr Client Library to connect to Wagerr Core via RPC",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "author": {
     "name": "Wagerr Limited"
   },
@@ -34,6 +34,7 @@
     "coveralls": "^2.11.2",
     "istanbul": "^1.1.0-alpha.1",
     "mocha": "^2.1.0",
+    "moxios": "^0.4.0",
     "sinon": "^1.12.2"
   },
   "bugs": {
